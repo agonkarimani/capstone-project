@@ -15,6 +15,7 @@ function Cards() {
               text="Explore southern Albania and the amazing beach of Saranda!"
               label="Saranda"
               header="Saranda - South Albania"
+              favorite="Add to favorites"
             />
           </Card>
           <Card>
@@ -23,6 +24,7 @@ function Cards() {
               text="Travel to Dubrovnik and enjoy the picturesque old town!"
               label="Dubrovnik"
               header="Dubrovnik - The pearl of Croatia"
+              favorite="Add to favorites"
             />
           </Card>
           <Card>
@@ -31,6 +33,7 @@ function Cards() {
               text="Theth the beautiful village in the Albanian Alps is an insiders' tip for hikers!"
               label="Theth"
               header="Theth - The Albanian Alps"
+              favorite="Add to favorites"
             />
           </Card>
           <Card>
@@ -39,6 +42,7 @@ function Cards() {
               text="Plitvice Lakes National Park is one of the oldest and largest national parks of Croatia!"
               label="Plitvice"
               header="Plitvice - Croatias national park"
+              favorite="Add to favorites"
             />
           </Card>
           <Card>
@@ -47,6 +51,7 @@ function Cards() {
               text="Kotor is famous for its old town and its high population of cats!"
               label="Kotor"
               header="Kotor - The fjord of Montenegro"
+              favorite="Add to favorites"
             />
           </Card>
           <Card>
@@ -55,6 +60,7 @@ function Cards() {
               text="Sarajevo is also called the Jerusalem of Europe because of the diversity of the city!"
               label="Sarajevo"
               header="Sarajevo - Jerusalem of Europe"
+              favorite="Add to favorites"
             />
           </Card>
         </CardsWrapper>

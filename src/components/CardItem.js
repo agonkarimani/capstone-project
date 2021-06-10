@@ -1,24 +1,30 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+import styled from "styled-components/macro";
+
+import Heart from "react-animated-heart";
 
 function CardItem(props) {
   const [readMore, setReadMore] = useState(false);
+  const [isClick, setClick] = useState(false);
   return (
     <>
       <Card>
         <CardWrapper>
           <CardImageWrapper data-category={props.label}>
             <CardImage alt="Travel Image" src={props.src} />
+            <CardHeader>{props.header}</CardHeader>
           </CardImageWrapper>
           <CardInfo>
-            <CardHeader className="cards__item__header">
-              {props.header}
-            </CardHeader>
-            <CardText className="cards__item__text">
-              {readMore ? props.text : `${props.text.substring(0, 50)}...`}
+            <CardHeader>{props.header}</CardHeader>
+            <CardText>
+              {readMore ? props.text : `${props.text.substring(0, 25)}...`}
               <ShowText onClick={() => setReadMore(!readMore)}>
                 {readMore ? "show less" : "show more"}
               </ShowText>
+              <Favorite>
+                {props.favorite}
+                <Heart isClick={isClick} onClick={() => setClick(!isClick)} />
+              </Favorite>
             </CardText>
           </CardInfo>
         </CardWrapper>
@@ -104,6 +110,12 @@ const ShowText = styled.button`
 const CardHeader = styled.h2`
   color: rgb(0, 0, 83);
   font-size: 18px;
+`;
+
+const Favorite = styled.button`
+  margin: 15px;
+  border: none;
+  background-color: #fff;
 `;
 
 export default CardItem;
