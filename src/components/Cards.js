@@ -1,7 +1,7 @@
 import React from "react";
 import "./Cards.css";
 import CardItem from "./CardItem";
-import styled from "styled-components";
+import styled from "styled-components/macro";
 
 function Cards() {
   return (

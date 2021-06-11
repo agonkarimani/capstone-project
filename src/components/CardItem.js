@@ -1,29 +1,32 @@
 import React, { useState } from "react";
 import styled from "styled-components/macro";
-
 import Heart from "react-animated-heart";
+import PropTypes from "prop-types";
 
-function CardItem(props) {
+function CardItem({ label, src, header, text, favorite }) {
   const [readMore, setReadMore] = useState(false);
-  const [isClick, setClick] = useState(false);
+  const [isFavorite, setIsFavorite] = useState(false);
   return (
     <>
       <Card>
         <CardWrapper>
-          <CardImageWrapper data-category={props.label}>
-            <CardImage alt="Travel Image" src={props.src} />
-            <CardHeader>{props.header}</CardHeader>
+          <CardImageWrapper data-category={label}>
+            <CardImage alt="Travel Image" src={src} />
+            <CardHeader>{header}</CardHeader>
           </CardImageWrapper>
           <CardInfo>
-            <CardHeader>{props.header}</CardHeader>
+            <CardHeader>{header}</CardHeader>
             <CardText>
-              {readMore ? props.text : `${props.text.substring(0, 25)}...`}
+              {readMore ? text : `${text.substring(0, 25)}...`}
               <ShowText onClick={() => setReadMore(!readMore)}>
                 {readMore ? "show less" : "show more"}
               </ShowText>
               <Favorite>
-                {props.favorite}
-                <Heart isClick={isClick} onClick={() => setClick(!isClick)} />
+                {favorite}
+                <Heart
+                  isClick={isFavorite}
+                  onClick={() => setIsFavorite(!isFavorite)}
+                />
               </Favorite>
             </CardText>
           </CardInfo>
@@ -32,6 +35,14 @@ function CardItem(props) {
     </>
   );
 }
+
+CardItem.propTypes = {
+  label: PropTypes.string,
+  src: PropTypes.string,
+  header: PropTypes.string,
+  text: PropTypes.string,
+  favorite: PropTypes.string,
+};
 
 const Card = styled.section`
   display: flex;
