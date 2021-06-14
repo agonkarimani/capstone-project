@@ -12,10 +12,10 @@ PlacesPage.propTypes = {
 export default function PlacesPage({ onNavigate }) {
   return (
     <Wrapper>
-      <Header>Places</Header>
+      <Header>Check out the most beautiful places of the Balkans!</Header>
       <ListWrapper>
-        {locations.sightseeing.map(({ id, image, title, text }) => {
-          return <Card key={id} image={image} title={title} text={text} />;
+        {locations.places.map(({ id, images, title, text }) => {
+          return <Card key={id} images={images} title={title} text={text} />;
         })}
       </ListWrapper>
       <Button onClick={onNavigate}>Favorites</Button>
