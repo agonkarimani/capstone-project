@@ -1,20 +1,10 @@
 import styled from "styled-components";
-import { useState } from "react";
 import Placespage from "./pages/PlacesPage/PlacesPage";
-import FavoritesPage from "./pages/FavoritesPage/FavoritesPage";
 
 export default function App() {
-  const [currentPage, setCurrentPage] = useState("PlacesPage");
-
   return (
     <AppGrid>
-      {currentPage === "placesPage" && (
-        <Placespage onNavigate={() => setCurrentPage("favoritesPage")} />
-      )}
-
-      {currentPage === "favoritesPage" && (
-        <FavoritesPage onNavigate={() => setCurrentPage("PlacesPage")} />
-      )}
+      <Placespage />
     </AppGrid>
   );
 }
