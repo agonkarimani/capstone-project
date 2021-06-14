@@ -10,13 +10,13 @@ export default function Header({ children }) {
 }
 
 const HeaderStyled = styled.h1`
-  display: grid;
-  width: 100%;
+  display: flex;
   place-items: center;
+  justify-content: center;
   margin: 0;
   padding: 20px;
   font-family: 'Roboto';
-  font-size: 35px;
-  color: white;
-  background-color: black;
+  font-size: 30px;
+  color: darkseagreen;
+  background: none;
 `

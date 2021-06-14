@@ -32,61 +32,61 @@ export default function Card({ text, title, image, label }) {
 
 const Wrapper = styled.section`
   display: flex;
-  flex: 1;
-  margin: 0 1rem;
+  flex-flow: column;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 350px;
+  height: auto;
   border-radius: 10px;
-  div {
+  box-shadow: 0 2px 12px darkgrey;
+  text-decoration: none;
+  @media only screen and (max-width: 800px) {
     display: flex;
     flex-flow: column;
-    width: 100%;
-    box-shadow: 0 6px 20px darkgrey;
+    max-width: 300px;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
     border-radius: 10px;
-    overflow: hidden;
+    box-shadow: 0 2px 12px darkgrey;
     text-decoration: none;
   }
   figure {
     position: relative;
-    width: 100%;
-    padding-top: 67%;
+    margin: 0;
+    padding: 0;
     overflow: hidden;
+    border-radius: 10px;
     &::after {
       content: attr(data-category);
       position: absolute;
       bottom: 0;
-      margin-left: 10px;
       padding: 6px 8px;
       max-width: calc((100%) - 60px);
       font-size: 12px;
       font-weight: 700;
       color: #fff;
-      background-color: #1f98f4;
+      background-color: darkseagreen;
       box-sizing: border-box;
     }
   }
   img {
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-    max-height: 100%;
+    min-width: 350px;
+    max-height: 350px;
+    margin: 0;
+    padding: 0%;
     object-fit: cover;
-    transition: all 0.2s linear;
-    &:hover {
-      transform: scale(1.1);
-    }
+    display: block;
+    position: relative;
   }
   h2 {
-    padding: 10px 10px 10px;
+    padding: 10px 15px 15px;
     color: darkseagreen;
     font-size: 25px;
   }
   p {
-    padding: 10px 10px 10px;
+    padding: 10px 15px 15px;
     color: black;
     font-size: 16px;
     line-height: 24px;
