@@ -2,7 +2,7 @@ import styled from 'styled-components/macro'
 import PropTypes from 'prop-types'
 
 Card.propTypes = {
-  image: PropTypes.node.isRequired,
+  images: PropTypes.node.isRequired,
   title: PropTypes.string,
   text: PropTypes.string,
 }
@@ -20,13 +20,14 @@ export default function Card({ text, title, images }) {
 const WrapperList = styled.li`
   background-color: white;
   padding: 20px;
+  margin: 20px;
   align-items: center;
-  box-shadow: 0 8px 16px #0006;
+  box-shadow: 0 8px 4px lightgrey;
   display: grid;
   max-width: 100%;
   font-family: 'Roboto';
   list-style-type: none;
-  font-size: 20px;
+  font-size: 18px;
   color: black;
   img {
     justify-self: center;
@@ -37,6 +38,7 @@ const WrapperList = styled.li`
     object-fit: cover;
   }
   h2 {
+    color: navy;
     font-size: 25px;
   }
 `

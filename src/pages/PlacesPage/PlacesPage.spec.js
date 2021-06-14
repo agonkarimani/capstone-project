@@ -7,7 +7,7 @@ describe("PlacesPage", () => {
 
     const title = screen.getAllByRole("heading");
     expect(title).toHaveLength(6);
-    const image = screen.getAllByRole("img");
-    expect(image).toHaveLength(5);
+    const images = screen.getAllByRole("img");
+    expect(images).toHaveLength(5);
   });
 });
