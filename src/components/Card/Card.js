@@ -2,15 +2,15 @@ import styled from 'styled-components/macro'
 import PropTypes from 'prop-types'
 
 Card.propTypes = {
-  images: PropTypes.node.isRequired,
+  image: PropTypes.node.isRequired,
   title: PropTypes.string,
   text: PropTypes.string,
 }
 
-export default function Card({ text, title, images }) {
+export default function Card({ text, title, image }) {
   return (
     <WrapperList>
-      <img src={images} alt="" />
+      <img src={image} alt="" />
       <h2>{title}</h2>
       <p>{text}</p>
     </WrapperList>
