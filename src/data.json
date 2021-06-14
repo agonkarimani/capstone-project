@@ -3,57 +3,65 @@
     {
       "type": "card",
       "id": 1,
+      "label": "Saranda",
       "title": "Saranda - South Albania",
-      "image": "https://unsplash.com/photos/X9wMvjjxGlg",
+      "image": "https://images.unsplash.com/photo-1568476128546-299b4da0b061?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
       "text": "Saranda is a seaside resort on the Albanian Riviera in the south of the country. The city lies between the Ionian Sea and hills with olive groves, on a bay with a beach and promenade. In the city center are the remains of a synagogue from the 5th century, which later served as an early Christian basilica. The elaborate mosaic floors can still be seen today. On a hill above the city is the castle 'Kalaja e Lëkurësit' from the 16th century."
     },
     {
       "type": "card",
       "id": 2,
+      "label": "Dubrovnik",
       "title": "Dubrovnik - The pearl of Croatia",
-      "image": "https://unsplash.com/photos/fWtJvFqyUQQ",
+      "image": "https://images.unsplash.com/photo-1555990793-da11153b2473?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1651&q=80",
       "text": "Dubrovnik is located in the south of Croatia on the Adriatic Sea. The characteristic old town, which is completely surrounded by a massive stone wall completed in the 16th century, is best known. The architecture of the well-preserved buildings ranges from the Baroque style (Church of St. Blaise) through the Renaissance (Sponza Palace) to the Gothic (Rector's Palace, now a history museum). There are many shops and restaurants in the limestone-paved pedestrian streets of Stradun or Placa."
     },
     {
       "type": "card",
       "id": 3,
+      "label": "Theth",
       "title": "Theth - The Albanian Alps",
-      "image": "https://unsplash.com/photos/Slx0LNwbEvY",
+      "image": "https://images.unsplash.com/photo-1565720709091-5d07a6da20d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=544&q=80",
       "text": "Theth or Thethi is a village in Bashkia Shkodra in the Albanian Alps. It is located in the highest part of the trough valley of the Shala River, surrounded by several high two-thousand-meter peaks, including the Radohima in the west, the Arapi in the north and the Maja e Popllukës and the Jezerca behind in the east."
     },
     {
       "type": "card",
       "id": 4,
+      "label": "Plitvice",
       "title": "Plitvice - Croatias national park",
-      "image": "https://unsplash.com/photos/NfkWUOkB78c",
+      "image": "https://images.unsplash.com/photo-1589312133722-eab40c686ebb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1554&q=80",
       "text": "The Plitvice Lakes National Park is a 295 km² forest reserve in central Croatia. The national park is known for its 16 cascading lakes, which are connected by waterfalls and extend into a limestone gorge. Several walking and hiking trails run along the shore or across the water. An electrically operated ferry connects the 12 upper and 4 lower lakes. In the lower lake area there is also the Veliki Slap, a 78 m high waterfall."
     },
     {
       "type": "card",
       "id": 5,
+      "label": "Kotor",
       "title": "Kotor - The fjord of Montenegro",
-      "image": "https://unsplash.com/photos/_nupO8tu6sg",
+      "image": "https://images.unsplash.com/photo-1614122027743-50a9e6e8002f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80",
       "text": "Kotor is a fortified town on the Adriatic coast of Montenegro. It is located in a bay near the Lovćen mountain massif and its limestone cliffs. The medieval old town is characterized by its winding streets and squares and is home to several Romanesque churches, such as Saint Tryphon's Cathedral. The Old Town is also home to the Maritime Museum, which tells the maritime history of the city. On Sveti Đorđe, one of 2 tiny islands off the ancient town of Perast, stands a centuries-old church."
     },
     {
       "type": "card",
       "id": 6,
+      "label": "Sarajevo",
       "title": "Sarajevo - Jerusalem of Europe",
-      "image": "https://unsplash.com/photos/XqSkdJBzxt0",
+      "image": "https://images.unsplash.com/photo-1544673442-97c212ad48df?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1001&q=80",
       "text": "Sarajevo, the compact capital of Bosnia and Herzegovina, is located in the middle of the Dinaric Mountains on the Miljacka River. Among the municipal history museums in the center is the Sarajevo 1878-1918 Museum, which covers the assassination of Archduke Franz Ferdinand that sparked World War 1 in 1914. One of the landmarks in the Old Town district of Baščaršija is the Gazi Husrev Beg Mosque, built under the rule of the Ottoman Empire."
     },
     {
       "type": "card",
       "id": 7,
+      "label": "Durmitor",
       "title": "Durmitor - The powerful mountain",
-      "image": "https://unsplash.com/photos/W1WQS9m3D8c",
+      "image": "https://images.unsplash.com/photo-1596399577137-d1dbcd6ea8ff?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1579&q=80",
       "text": "Durmitor is a mountain massif in the north of Montenegro, which belongs to the Dinarides mountain range. The Durmitor National Park, which surrounds the massif and was declared a national park in 1952, has been a UNESCO World Natural Heritage Site since 1980. The highest peak of the Durmitor massif, at 2,522 meters, is Bobotov Kuk."
     },
     {
       "type": "card",
       "id": 8,
+      "label": "Ohrid",
       "title": "Ohrid - The old lake",
-      "image": "https://unsplash.com/photos/GAmRJl_SvoQ",
+      "image": "https://images.unsplash.com/photo-1611845528017-75215e6d662c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
       "text": "Lake Ohrid is the second largest lake in the Balkan Peninsula, as well as one of the oldest in the world. It belongs mostly to Northern Macedonia, of which it is the largest body of water, and to Albania to a lesser extent. The water level is 695 meters above sea level. Lake Ohrid has a maximum depth of 288 meters."
     }
   ]

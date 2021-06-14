@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import Placespage from "./pages/PlacesPage/PlacesPage";
+import PlacesPage from "./pages/PlacesPage/PlacesPage";
 
 export default function App() {
   return (
     <AppGrid>
-      <Placespage />
+      <PlacesPage />
     </AppGrid>
   );
 }

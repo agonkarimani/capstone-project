@@ -15,7 +15,6 @@ const HeaderStyled = styled.h1`
   place-items: center;
   margin: 0;
   padding: 20px;
-  justify-self: center;
   font-family: 'Roboto';
   font-size: 35px;
   color: white;

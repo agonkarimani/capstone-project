@@ -11,27 +11,45 @@ PlacesPage.propTypes = {
 
 export default function PlacesPage({ onNavigate }) {
   return (
-    <Wrapper>
-      <Header>Travel the Balkans!</Header>
-      <ListWrapper>
-        {locations.places.map(({ id, image, title, text }) => {
-          return <Card key={id} images={image} title={title} text={text} />;
-        })}
-      </ListWrapper>
-      <Button onClick={onNavigate}>Favorites</Button>
-    </Wrapper>
+    <>
+      <Wrapper>
+        <CardWrapper>
+          <Header>Travel the Balkans!</Header>
+          <ListWrapper>
+            {locations.places.map(({ id, image, title, text, label }) => {
+              return (
+                <Card
+                  key={id}
+                  image={image}
+                  title={title}
+                  text={text}
+                  label={label}
+                />
+              );
+            })}
+          </ListWrapper>
+          <Button onClick={onNavigate}>Favorites</Button>
+        </CardWrapper>
+      </Wrapper>
+    </>
   );
 }
+
 const Wrapper = styled.section`
+  padding: 4rem;
+  background: #fff;
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   align-items: center;
-  justify-content: center;
-  gap: 20px;
+  max-width: 1120px;
+  width: 90%;
+  margin: 0 auto;
 `;
+const CardWrapper = styled.div`
+  position: relative;
+  margin: 50px 0 45px;
+`;
+
 const ListWrapper = styled.ul`
-  list-style-type: none;
-  display: grid;
-  gap: 10px;
-  padding: 5px;
+  margin-bottom: 24px;
 `;
