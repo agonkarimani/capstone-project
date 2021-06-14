@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
-import Card from "../components/Card/Card";
-import locations from "../data.json";
+import Card from "./../../components/Card/Card";
+import locations from "./../../data.json";
 import styled from "styled-components/macro";
-import Header from "../components/Header/Header";
-import Button from "../components/Button/Button";
+import Header from "./../../components/Header/Header";
+import Button from "./../../components/Button/Button";
 
 PlacesPage.propTypes = {
   onNavigate: PropTypes.func.isRequired,
