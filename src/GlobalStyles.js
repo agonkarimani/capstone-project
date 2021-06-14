@@ -10,7 +10,7 @@ body {
    
     font-family: 'Roboto', sans-serif;
     
-    color: black;
+    color: whitesmoke;
     overflow-x: hidden;
 }
 `;
