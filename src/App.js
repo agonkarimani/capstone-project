@@ -1,21 +1,30 @@
-import React from "react";
-import "./App.css";
-import Home from "./components/pages/Home.js";
-import Favorites from "./components/pages/Favorites";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import styled from "styled-components/macro";
+import styled from "styled-components";
+import { useState } from "react";
+import Placespage from "./pages/PlacesPage/PlacesPage";
+import FavoritesPage from "./pages/FavoritesPage/FavoritesPage";
 
-function App() {
+export default function App() {
+  const [currentPage, setCurrentPage] = useState("PlacesPage");
+
   return (
-    <>
-      <Router>
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/favorites" exact component={Favorites} />
-        </Switch>
-      </Router>
-    </>
+    <AppGrid>
+      {currentPage === "placesPage" && (
+        <Placespage onNavigate={() => setCurrentPage("favoritesPage")} />
+      )}
+
+      {currentPage === "favoritesPage" && (
+        <FavoritesPage onNavigate={() => setCurrentPage("PlacesPage")} />
+      )}
+    </AppGrid>
   );
 }
 
-export default App;
+const AppGrid = styled.div`
+  display: grid;
+  justify-content: center;
+  grid-template-rows: auto min-content;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  gap: 20px;
+`;
