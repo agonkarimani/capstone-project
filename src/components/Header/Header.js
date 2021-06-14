@@ -18,5 +18,6 @@ const HeaderStyled = styled.h1`
   justify-self: center;
   font-family: 'Roboto';
   font-size: 35px;
-  color: black;
+  color: white;
+  background-color: black;
 `
