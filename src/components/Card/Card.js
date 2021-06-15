@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components/macro'
 import PropTypes from 'prop-types'
+import Heart from 'react-animated-heart'
 
 Card.propTypes = {
   image: PropTypes.node.isRequired,
@@ -10,6 +11,8 @@ Card.propTypes = {
 
 export default function Card({ text, title, image, label }) {
   const [readMore, setReadMore] = useState(false)
+  const [isFavorite, setIsFavorite] = useState(false)
+
   return (
     <>
       <Wrapper>
@@ -24,6 +27,12 @@ export default function Card({ text, title, image, label }) {
               {readMore ? 'show less' : 'show more'}
             </button>
           </p>
+          <Favor>
+            <Heart
+              isClick={isFavorite}
+              onClick={() => setIsFavorite(!isFavorite)}
+            />
+          </Favor>
         </div>
       </Wrapper>
     </>
@@ -97,4 +106,10 @@ const Wrapper = styled.section`
     color: #1f98f4;
     font-size: 12px;
   }
+`
+const Favor = styled.button`
+  background-color: white;
+  border-radius: 10px;
+  max-height: 8px;
+  max-width: 8px;
 `
