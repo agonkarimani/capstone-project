@@ -9,7 +9,7 @@ Card.propTypes = {
   text: PropTypes.string,
 }
 
-export default function Card({ text, title, image, label }) {
+export default function Card({ id, text, title, image, label }) {
   const [readMore, setReadMore] = useState(false)
   const [isFavorite, setIsFavorite] = useState(false)
 
@@ -23,16 +23,16 @@ export default function Card({ text, title, image, label }) {
           <h2>{title}</h2>
           <p>
             {readMore ? text : `${text.substring(0, 50)}...`}
-            <button onClick={() => setReadMore(!readMore)}>
+            <DetailsButton onClick={() => setReadMore(!readMore)}>
               {readMore ? 'show less' : 'show more'}
-            </button>
+            </DetailsButton>
           </p>
-          <Favor>
+          <FavButton>
             <Heart
               isClick={isFavorite}
               onClick={() => setIsFavorite(!isFavorite)}
             />
-          </Favor>
+          </FavButton>
         </div>
       </Wrapper>
     </>
@@ -100,16 +100,16 @@ const Wrapper = styled.section`
     font-size: 16px;
     line-height: 24px;
   }
-  button {
-    background-color: white;
-    border: none;
-    color: #1f98f4;
-    font-size: 12px;
-  }
 `
-const Favor = styled.button`
+
+const DetailsButton = styled.button`
   background-color: white;
+  border: none;
+  color: #1f98f4;
+  font-size: 13px;
+`
+const FavButton = styled.button`
+  background-color: transparent;
+  border: none;
   border-radius: 10px;
-  max-height: 8px;
-  max-width: 8px;
 `

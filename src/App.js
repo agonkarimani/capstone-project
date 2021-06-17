@@ -1,15 +1,17 @@
-import styled from "styled-components";
+import React from "react";
+import styled from "styled-components/macro";
 import PlacesPage from "./pages/PlacesPage/PlacesPage";
+/*import { Route, Switch } from "react-router-dom";*/
 
 export default function App() {
   return (
-    <AppGrid>
+    <AppContainer>
       <PlacesPage />
-    </AppGrid>
+    </AppContainer>
   );
 }
 
-const AppGrid = styled.div`
+const AppContainer = styled.div`
   display: grid;
   justify-content: center;
   grid-template-rows: auto min-content;
