@@ -7,6 +7,8 @@ Card.propTypes = {
   image: PropTypes.node.isRequired,
   title: PropTypes.string,
   text: PropTypes.string,
+  id: PropTypes.number,
+  label: PropTypes.string,
 }
 
 export default function Card({ id, text, title, image, label }) {
@@ -16,24 +18,22 @@ export default function Card({ id, text, title, image, label }) {
   return (
     <>
       <Wrapper>
-        <div>
-          <figure data-category={label}>
-            <img alt="" src={image} />
-          </figure>
-          <h2>{title}</h2>
-          <p>
-            {readMore ? text : `${text.substring(0, 50)}...`}
-            <DetailsButton onClick={() => setReadMore(!readMore)}>
-              {readMore ? 'show less' : 'show more'}
-            </DetailsButton>
-          </p>
-          <FavButton>
-            <Heart
-              isClick={isFavorite}
-              onClick={() => setIsFavorite(!isFavorite)}
-            />
-          </FavButton>
-        </div>
+        <ImageWrapper data-category={label}>
+          <img alt="" src={image} />
+        </ImageWrapper>
+        <Header>{title}</Header>
+        <Text>
+          {readMore ? text : `${text.substring(0, 50)}...`}
+          <DetailsButton onClick={() => setReadMore(!readMore)}>
+            {readMore ? 'show less' : 'show more'}
+          </DetailsButton>
+        </Text>
+        <FavButton>
+          <Heart
+            isClick={isFavorite}
+            onClick={id => setIsFavorite(!isFavorite)}
+          />
+        </FavButton>
       </Wrapper>
     </>
   )
@@ -60,24 +60,24 @@ const Wrapper = styled.section`
     box-shadow: 0 2px 12px darkgrey;
     text-decoration: none;
   }
-  figure {
-    position: relative;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    border-radius: 10px;
-    &::after {
-      content: attr(data-category);
-      position: absolute;
-      bottom: 0;
-      padding: 6px 8px;
-      max-width: calc((100%) - 60px);
-      font-size: 12px;
-      font-weight: 700;
-      color: #fff;
-      background-color: darkseagreen;
-      box-sizing: border-box;
-    }
+`
+const ImageWrapper = styled.figure`
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  &::after {
+    content: attr(data-category);
+    position: absolute;
+    bottom: 0;
+    padding: 6px 8px;
+    max-width: calc((100%) - 60px);
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    background-color: darkseagreen;
+    box-sizing: border-box;
   }
   img {
     position: absolute;
@@ -89,17 +89,17 @@ const Wrapper = styled.section`
     display: block;
     position: relative;
   }
-  h2 {
-    padding: 10px 15px 15px;
-    color: darkseagreen;
-    font-size: 25px;
-  }
-  p {
-    padding: 10px 15px 15px;
-    color: black;
-    font-size: 16px;
-    line-height: 24px;
-  }
+`
+const Header = styled.h2`
+  padding: 10px 15px 15px;
+  color: darkseagreen;
+  font-size: 25px;
+`
+const Text = styled.p`
+  padding: 10px 15px 15px;
+  color: black;
+  font-size: 16px;
+  line-height: 24px;
 `
 
 const DetailsButton = styled.button`
