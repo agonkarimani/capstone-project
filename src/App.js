@@ -1,18 +1,22 @@
 import React from "react";
-import "./App.css";
-import Home from "./components/pages/Home.js";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import styled from "styled-components/macro";
+import PlacesPage from "./pages/PlacesPage/PlacesPage";
+/*import { Route, Switch } from "react-router-dom";*/
 
-function App() {
+export default function App() {
   return (
-    <>
-      <Router>
-        <Switch>
-          <Route path="/" exact component={Home} />
-        </Switch>
-      </Router>
-    </>
+    <AppContainer>
+      <PlacesPage />
+    </AppContainer>
   );
 }
 
-export default App;
+const AppContainer = styled.div`
+  display: grid;
+  justify-content: center;
+  grid-template-rows: auto min-content;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  gap: 20px;
+`;
