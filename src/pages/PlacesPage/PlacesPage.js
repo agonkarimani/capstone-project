@@ -1,15 +1,15 @@
 import Card from "./../../components/Card/Card";
-import locations from "./../../data.json";
 import styled from "styled-components/macro";
 import Header from "../../components/Header/Header";
 
-export default function PlacesPage() {
+export default function PlacesPage({ places, handleToggleIsFavorite }) {
+  console.log(places);
   return (
     <>
       <Wrapper>
         <Header>Travel the Balkans!</Header>
         <ListWrapper>
-          {locations.places.map(({ id, image, title, text, label }) => {
+          {places?.map(({ id, image, title, text, label, isFavorite }) => {
             return (
               <Card
                 key={id}
@@ -17,6 +17,8 @@ export default function PlacesPage() {
                 title={title}
                 text={text}
                 label={label}
+                isFavorite={isFavorite}
+                onToggleIsFavorite={() => handleToggleIsFavorite(id)}
               />
             );
           })}

@@ -11,9 +11,16 @@ Card.propTypes = {
   label: PropTypes.string,
 }
 
-export default function Card({ id, text, title, image, label }) {
+export default function Card({
+  id,
+  text,
+  title,
+  image,
+  label,
+  isFavorite,
+  onToggleIsFavorite,
+}) {
   const [readMore, setReadMore] = useState(false)
-  const [isFavorite, setIsFavorite] = useState(false)
 
   return (
     <>
@@ -23,16 +30,14 @@ export default function Card({ id, text, title, image, label }) {
         </ImageWrapper>
         <Header>{title}</Header>
         <Text>
-          {readMore ? text : `${text.substring(0, 50)}...`}
+          {readMore ? text : `${text.substring(0, 25)}...`}
           <DetailsButton onClick={() => setReadMore(!readMore)}>
             {readMore ? 'show less' : 'show more'}
           </DetailsButton>
         </Text>
         <FavButton>
-          <Heart
-            isClick={isFavorite}
-            onClick={id => setIsFavorite(!isFavorite)}
-          />
+          <Heart isClick={isFavorite} onClick={() => onToggleIsFavorite(id)} />
+          {isFavorite ? 'Remove from favorites' : 'Add to favorites'}
         </FavButton>
       </Wrapper>
     </>
@@ -109,7 +114,12 @@ const DetailsButton = styled.button`
   font-size: 13px;
 `
 const FavButton = styled.button`
+  display: flex;
+  flex-flow: column;
+  align-items: center;
   background-color: transparent;
   border: none;
   border-radius: 10px;
+  color: #1f98f4;
+  margin-bottom: 20px;
 `
