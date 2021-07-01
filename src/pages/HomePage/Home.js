@@ -5,7 +5,7 @@ function HeroSection() {
   return (
     <>
       <Wrapper>
-        <video src="../../Assets/video-1.mp4" autoPlay loop muted />
+        <video src="../../Assets/albania.mp4" autoPlay loop muted />
         <Header>BALKAN AWAITS</Header>
         <Text>What are you waiting for?</Text>
       </Wrapper>
@@ -50,7 +50,7 @@ const Wrapper = styled.div`
 `;
 
 const Header = styled.h1`
-  color: darkseagreen;
+  color: whitesmoke;
   font-size: 100px;
   margin-top: -100px;
   @media screen and (max-width: 960px) {
@@ -60,7 +60,7 @@ const Header = styled.h1`
 
 const Text = styled.p`
   margin-top: 8px;
-  color: darkseagreen;
+  color: whitesmoke;
   font-size: 32px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
