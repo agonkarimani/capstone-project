@@ -30,7 +30,7 @@ export default function Card({
         </ImageWrapper>
         <Header>{title}</Header>
         <Text>
-          {readMore ? text : `${text.substring(0, 25)}...`}
+          {readMore ? text : `${text.substring(0, 20)}...`}
           <DetailsButton onClick={() => setReadMore(!readMore)}>
             {readMore ? 'show less' : 'show more'}
           </DetailsButton>

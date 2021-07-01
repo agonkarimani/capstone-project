@@ -11,17 +11,32 @@ function Navbar() {
       <NavWrapper>
         <MenuWrapper>
           <MenuPoint>
-            <StyledLink to="/">
+            <StyledLink
+              to="/"
+              activeStyle={{
+                color: 'darkgreen',
+              }}
+            >
               <FiHome />
             </StyledLink>
           </MenuPoint>
           <MenuPoint>
-            <StyledLink to="/PlacesPage">
+            <StyledLink
+              to="/PlacesPage"
+              activeStyle={{
+                color: 'darkgreen',
+              }}
+            >
               <GiMountainRoad />
             </StyledLink>
           </MenuPoint>
           <MenuPoint>
-            <StyledLink to="/Favoritespage">
+            <StyledLink
+              to="/Favoritespage"
+              activeStyle={{
+                color: 'darkgreen',
+              }}
+            >
               <MdFavoriteBorder />
             </StyledLink>
           </MenuPoint>
@@ -65,7 +80,4 @@ const StyledLink = styled(Link)`
   padding: 0 25px;
   color: darkseagreen;
   text-align: center;
-  :active {
-    color: darkgreen;
-  }
 `
