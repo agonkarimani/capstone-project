@@ -1,13 +1,7 @@
 import { useHistory } from "react-router-dom";
-import PropTypes from "prop-types";
 import styled from "styled-components/macro";
 import Card from "../../components/Card/Card";
 import Header from "../../components/Header/Header";
-
-FavoritesPage.propTypes = {
-  history: PropTypes.func.isRequired,
-  handleToggleIsFavorite: PropTypes.func,
-};
 
 export default function FavoritesPage({ favorites, handleToggleIsFavorite }) {
   let history = useHistory();

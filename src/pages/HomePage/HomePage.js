@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components/macro";
 
-function HeroSection() {
+function HomePage() {
   return (
     <>
       <Wrapper>
@@ -13,7 +13,7 @@ function HeroSection() {
   );
 }
 
-export default HeroSection;
+export default HomePage;
 
 const Wrapper = styled.div`
   background-color: transparent;

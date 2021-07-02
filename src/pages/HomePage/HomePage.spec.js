@@ -1,9 +1,9 @@
 import { render, screen } from "@testing-library/react";
-import Home from "./HomePage";
+import HomePage from "./HomePage";
 
-describe("PlacesPage", () => {
+describe("HomePage", () => {
   it("renders a title and a video", () => {
-    render(<Home />);
+    render(<HomePage />);
 
     const title = screen.getAllByRole("heading");
     expect(title).toHaveLength(6);

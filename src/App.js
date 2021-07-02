@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components/macro";
 import { loadFromLocal, saveToLocal } from "./utils/localStorage";
 import PlacesPage from "./pages/PlacesPage/PlacesPage";
-import Home from "./pages/HomePage/Home";
+import HomePage from "./pages/HomePage/HomePage";
 import locations from "./data.json";
 import { Route, Switch } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
@@ -13,14 +13,14 @@ export default function App() {
   const favorites = places.filter((place) => place.isFavorite);
 
   useEffect(() => {
-    saveToLocal("places", locations);
+    saveToLocal("places", places);
   }, [places]);
 
   return (
     <AppContainer>
       <Switch>
         <Route exact path="/">
-          <Home />
+          <HomePage />
         </Route>
         <Route path="/PlacesPage">
           <PlacesPage

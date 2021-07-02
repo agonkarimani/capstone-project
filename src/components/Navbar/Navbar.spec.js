@@ -14,7 +14,7 @@ describe('Navbar', () => {
     expect(navbar).toBeInTheDocument()
   })
 
-  it('has at leat one nav link', () => {
+  it('has at least one nav link', () => {
     render(
       <Router>
         <Navbar />
