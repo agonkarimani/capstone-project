@@ -5,7 +5,7 @@ function HeroSection() {
   return (
     <>
       <Wrapper>
-        <video src="../../Assets/Albaniadrone.mp4" autoPlay loop muted />
+        <video src="../../Assets/albania.mp4" autoPlay loop muted />
         <Header>BALKAN AWAITS</Header>
         <Text>What are you waiting for?</Text>
       </Wrapper>
@@ -27,7 +27,7 @@ const Wrapper = styled.div`
   video {
     object-fit: cover;
     width: 100%;
-    height: 900px;
+    height: 1000px;
     position: fixed;
     z-index: -1;
   }
