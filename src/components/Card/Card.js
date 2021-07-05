@@ -108,7 +108,7 @@ const Text = styled.p`
 `
 
 const DetailsButton = styled.button`
-  background-color: white;
+  background-color: transparent;
   border: none;
   color: #1f98f4;
   font-size: 13px;
