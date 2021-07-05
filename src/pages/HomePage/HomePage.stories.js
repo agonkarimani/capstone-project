@@ -1,3 +1,4 @@
+import HomePage from "./HomePage";
 import Home from "./HomePage";
 
 export default {
@@ -5,7 +6,7 @@ export default {
   component: Home,
 };
 
-const Template = (args) => <Home {...args} />;
+const Template = (args) => <HomePage {...args} />;
 
 export const listedPlaces = Template.bind({});
 listedPlaces.args = {};
