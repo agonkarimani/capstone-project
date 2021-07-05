@@ -1,14 +1,54 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components/macro";
+import { loadFromLocal, saveToLocal } from "./utils/localStorage";
 import PlacesPage from "./pages/PlacesPage/PlacesPage";
-/*import { Route, Switch } from "react-router-dom";*/
+import HomePage from "./pages/HomePage/HomePage";
+import locations from "./data.json";
+import { Route, Switch } from "react-router-dom";
+import Navbar from "./components/Navbar/Navbar";
+import FavoritesPage from "./pages/FavoritesPage/FavoritesPage";
 
 export default function App() {
+  const [places, setPlaces] = useState(loadFromLocal("places") ?? locations);
+  const favorites = places.filter((place) => place.isFavorite);
+
+  useEffect(() => {
+    saveToLocal("places", places);
+  }, [places]);
+
   return (
     <AppContainer>
-      <PlacesPage />
+      <Switch>
+        <Route exact path="/">
+          <HomePage />
+        </Route>
+        <Route path="/PlacesPage">
+          <PlacesPage
+            places={places}
+            handleToggleIsFavorite={handleToggleIsFavorite}
+          />
+        </Route>
+        <Route path="/FavoritesPage">
+          <FavoritesPage
+            favorites={favorites}
+            handleToggleIsFavorite={handleToggleIsFavorite}
+          />
+        </Route>
+      </Switch>
+      <Navbar />
     </AppContainer>
   );
+
+  function handleToggleIsFavorite(id) {
+    const index = places.findIndex((place) => place.id === id);
+    const favorites = places[index];
+    console.log(favorites);
+    setPlaces([
+      ...places.slice(0, index),
+      { ...favorites, isFavorite: !favorites.isFavorite },
+      ...places.slice(index + 1),
+    ]);
+  }
 }
 
 const AppContainer = styled.div`
